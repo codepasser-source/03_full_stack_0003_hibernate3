@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.baishui.hibernate.xml">
+    <class name="User" table="xml_User">
+       <id name="id">
+           <generator class="native"></generator> 
+       </id>
+       
+       <property name="userName" /> 
+        <many-to-one name="group" column="groupId" cascade="all" fetch="join"></many-to-one> 
+    </class>	
+</hibernate-mapping>
